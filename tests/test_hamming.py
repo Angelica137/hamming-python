@@ -7,3 +7,7 @@ def test_hamming_distance_empty_strings():
 
 def test_hamming_distance_longer_strings():
     assert hamming_distance("abc", "abc") == 0
+
+
+def test_hamming_distance_one_difference():
+    assert hamming_distance("abc", "abd") == 1
