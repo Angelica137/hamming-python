@@ -15,3 +15,8 @@ def test_hamming_distance_one_difference():
 
 def test_hamming_distance_7_differences():
     assert hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") == 7
+
+
+def test_hamming_distance_different_lengths():
+    assert hamming_distance(
+        "abc", "abcd") == "Error: Strands must be of equal length"
