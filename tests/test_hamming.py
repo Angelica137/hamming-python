@@ -1,4 +1,5 @@
 from scripts.hamming import hamming_distance
+import pytest
 
 
 def test_hamming_distance_empty_strings():
@@ -18,5 +19,6 @@ def test_hamming_distance_7_differences():
 
 
 def test_hamming_distance_different_lengths():
-    assert hamming_distance(
-        "abc", "abcd") == "Error: Strands must be of equal length"
+    with pytest.raises(ValueError):
+        hamming_distance("abc", "abcd") == ValueError(
+            "Strands must be of equal length.")
